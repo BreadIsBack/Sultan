@@ -1,3 +1,168 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+    <div class="header__top">
+      <address class="address">
+        <ul class="address__list list-reset">
+          <li class="address__item address__item--address">
+            <p class="address__text">г. Кокчетав, ул. Ж. Ташенова 129Б</p>
+            <p class="address__text address__text--small">(Рынок Восточный)</p>
+          </li>
+          <li class="address__item address__item--email">
+            <a href="mailto:opt.sultan@mail.ru" class="address__email">opt.sultan@mail.ru</a>
+            <p class="address__text address__text--small">На связи в любое время</p>
+          </li>
+        </ul>
+      </address>
+      <nav class="header__nav nav" title="Навигация сайта" data-menu>
+        <ul class="list-reset header__nav-list nav__list">
+          <li class="nav__item" data-menu-item>
+            <a href="#" class="nav__link">
+              О компании
+            </a>
+          </li>
+          <li class="nav__item" data-menu-item>
+            <a href="#" class="nav__link">
+              Доставка и оплата
+            </a>
+          </li>
+          <li class="nav__item" data-menu-item>
+            <a href="#" class="nav__link">
+              Возврат
+            </a>
+          </li>
+          <li class="nav__item" data-menu-item>
+            <a href="#" class="nav__link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+
+    <div class="header__bottom">
+      <a href="#" class="logo header__logo">
+        <picture>
+          <source srcset="img/logo.webp" type="image/webp">
+          <img loading="lazy" src="img/logo.png" class="image" width="156" height="66" alt="Логотип компании Султан">
+        </picture>
+      </a>
+      <a class="header__catalog-link btn header__btn--catalog">Каталог</a>
+      <div class="header__search">
+        <form class="header__form">
+          <input class="input-reset header__form-input" type="text" placeholder="Поиск...">
+          <button class="btn-reset header__form-btn" type="submit"></button>
+        </form>
+      </div>
+      <div class="call-box">
+        <div class="call-box__inner">
+          <p class="call-box__text call-box__text--number">+7 (777) 490-00-91</p>
+          <p class="call-box__text call-box__text--work">время работы: 9:00-20:00</p>
+          <a href="tal:+77774900091" class="call-box__link">Заказать звонок</a>
+        </div>
+        <img class="call-box__img" src="img/header/call.jpg" alt="Девушка с микрофоном и гарнитурой">
+      </div>
+      <button class="header__btn btn-reset btn header__btn--price">Прайс-лист</button>
+      <div class="cart">
+        <a href="#" class="cart__link">
+          <div class="cart__wrapper cart-wrapper--header">
+            <svg class="cart__svg cart__svg--header">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </div>
+          <div class="cart__box">
+            <p class="cart__text">Корзина</p>
+            <span class="cart__digit">12478Р</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+  </div>
+</header>
+
+<header class="header-mobile">
+  <div class="container header-mobile__container">
+    <div class="header-mobile__top">
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+      <a href="#" class="logo header-mobile__logo">
+        <picture>
+          <source srcset="img/logo.webp" type="image/webp">
+          <img loading="lazy" src="img/logo-mobile.png" class="image" width="97" height="41"
+            alt="Логотип компании Султан">
+        </picture>
+      </a>
+      <div class="cart">
+        <a href="#" class="cart__link">
+          <div class="cart__wrapper cart__wrapper--mobile">
+            <svg class="cart__svg cart__svg--header-mobile">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="header-mobile__bottom">
+      <a href="" class="header-mobile__catalog-link">Каталог</a>
+      <form class="header-mobile__form">
+        <input class="input-reset header-mobile__form-input" type="text" placeholder="Поиск">
+        <button class="btn-reset header-mobile__form-btn" type="submit"></button>
+      </form>
+    </div>
+    <div class="header-mobile__burger-content">
+      <div class="header-mobile__info">
+        <address class="address address--header-mobile">
+          <ul class="address__list address__list--header-mobile list-reset">
+            <li class="address__item address__item--address">
+              <p class="address__text">г. Кокчетав, ул. Ж. Ташенова 129Б</p>
+              <p class="address__text address__text--small">(Рынок Восточный)</p>
+            </li>
+            <li class="address__item address__item--email">
+              <a href="mailto:opt.sultan@mail.ru" class="address__email">opt.sultan@mail.ru</a>
+              <p class="address__text address__text--small">На связи в любое время</p>
+            </li>
+            <li class="address__item address__item--tel">
+              <p class="address__text">Отдел продаж</p>
+              <p class="address__text address__text--small address__text--margin-bot">+7 (777) 490-00-91</p>
+              <p class="address__text address__text--small">время работы: 9:00-20:00</p>
+            </li>
+          </ul>
+        </address>
+        <a href="tal:+77774900091" class="header-mobile__call">Заказать звонок</a>
+      </div>
+      <div class="header-mobile__nav-box">
+        <h2 class="header-mobile__title">Меню сайта:</h2>
+        <nav class="header-mobile__nav nav" title="Навигация сайта" data-menu>
+          <ul class="list-reset header-mobile__nav-list nav__list">
+            <li class="nav__item" data-menu-item>
+              <a href="#" class="nav__link">
+                О компании
+              </a>
+            </li>
+            <li class="nav__item" data-menu-item>
+              <a href="#" class="nav__link">
+                Доставка и оплата
+              </a>
+            </li>
+            <li class="nav__item" data-menu-item>
+              <a href="#" class="nav__link">
+                Возврат
+              </a>
+            </li>
+            <li class="nav__item" data-menu-item>
+              <a href="#" class="nav__link">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button class="header-mobile__btn btn-reset btn">Прайс-лист</button>
+    </div>
+  </div>
 </header>

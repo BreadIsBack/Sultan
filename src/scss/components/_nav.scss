@@ -1,0 +1,11 @@
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: var(--main-color);
+  }
+}

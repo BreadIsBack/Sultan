@@ -1,0 +1,31 @@
+<header class="header-mobile">
+  <div class="container header-mobile__container">
+    <div class="header-mobile__top">
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
+      <a href="#" class="logo header-mobile__logo">
+        <picture>
+          <source srcset="img/logo.webp" type="image/webp">
+          <img loading="lazy" src="img/logo-mobile.png" class="image" width="97" height="41" alt="Логотип компании Султан">
+        </picture>
+      </a>
+      <div class="cart">
+        <a href="#" class="cart__link">
+          <div class="cart__wrapper cart__wrapper--mobile">
+            <svg class="cart__svg cart__svg--header-mobile">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="header-mobile__bottom">
+      <a href="" class="header-mobile__catalog-link">Каталог</a>
+      <form class="header-mobile__form">
+        <input class="input-reset header-mobile__form-input" type="text" placeholder="Поиск">
+        <button class="btn-reset header-mobile__form-btn" type="submit"></button>
+      </form>
+    </div>
+  </div>
+</header>

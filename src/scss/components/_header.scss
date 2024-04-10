@@ -1,0 +1,146 @@
+.header {
+  padding: 14px 0;
+  position: relative;
+
+  @include mobile {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    top: 61px;
+    background-color: var(--grey-color);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    @include tablet {
+      position: fixed;
+      display: block;
+      // padding: 30px;
+      overflow-y: auto;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100vh;
+      z-index: 900;
+      background-color: var(--yellow-color);
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: none;
+      }
+    }
+  }
+
+  &__nav-list {
+    gap: 50px;
+
+    @include tablet {
+      height: 100%;
+      font-size: 20px;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__top {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include big-tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    @include small-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__btn,
+  &__catalog-link {
+    width: fit-content;
+    padding: 20px 80px 20px 55px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 43px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &--catalog {
+      &::after {
+        content: url('../img/header/catalog.svg');
+      }
+    }
+
+    &--price {
+      &::after {
+        content: url('../img/header/price.svg');
+      }
+    }
+  }
+
+  &__form {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__form-input {
+    padding: 20px;
+    padding-right: 60px;
+    width: 100%;
+    border-radius: 36px;
+    height: 100%;
+    background-color: #ededed;
+    font-size: 12px;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: 150%;
+      color: #5c6370;
+      opacity: 0.6;
+    }
+  }
+
+  &__form-btn {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-image: url('../img/header/search-full.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+  }
+}

@@ -1,43 +1,44 @@
 /* stylelint-disable */
 
 @mixin burger {
-  --burger-width: 30px;
-  --burger-height: 30px;
+  --burger-width: 32px;
+  --burger-height: 32px;
   --burger-line-height: 2px;
 
   position: relative;
-  border: none;
+  // border: none;
+  border-radius: 50%;
   padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  color: #000;
-  background-color: transparent;
+  color: var(--light-color);
+  background-color: var(--yellow-color);
   cursor: pointer;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    left: 0;
-    width: 100%;
+    left: 12px;
+    width: 8px;
     height: var(--burger-line-height);
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   }
 
   &::before {
-    top: 0;
+    top: 12px;
   }
 
   &::after {
-    top: calc(100% - var(--burger-line-height));
+    bottom: 12px;
   }
 
   &__line {
     position: absolute;
-    left: 0;
+    left: 12px;
     top: 50%;
-    width: 100%;
+    width: 8px;
     height: var(--burger-line-height);
     background-color: currentColor;
     transform: translateY(-50%);

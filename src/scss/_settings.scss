@@ -18,7 +18,14 @@ html {
   margin: 0;
   min-width: 320px;
   height: 100%;
-  font-size: 16px;
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--main-color);
+
+  @include mobile {
+    font-size: 12px;
+  }
 }
 
 img {
@@ -29,6 +36,10 @@ img {
 
 a {
   text-decoration: none;
+}
+
+p {
+  margin: 0;
 }
 
 .overlay {
@@ -67,6 +78,14 @@ a {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.btn {
+  border-radius: 80px;
+  position: relative;
+  font-weight: 700;
+  color: var(--light-color);
+  background-color: var(--yellow-color);
 }
 
 .list-reset {

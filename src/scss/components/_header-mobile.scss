@@ -1,0 +1,156 @@
+.header-mobile {
+  padding: 10px 0;
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__catalog-link {
+    display: block;
+    position: relative;
+    padding-left: 21px;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--grey-color);
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url('../img/header/catalog-mobile.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__form {
+    max-width: 60px;
+    padding-left: 21px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url('../img/header/search-mobile.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__form-input {
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+    font-size: 12px;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: 150%;
+      color: var(--grey-color);
+    }
+  }
+
+  &__burger-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__info {
+    width: 100%;
+    padding-bottom: 25px;
+    border-bottom: 1px dotted var(--grey-color);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__call {
+    padding-left: 37px;
+    position: relative;
+    font-size: 10px;
+    line-height: 150%;
+    text-decoration: underline;
+    color: var(--grey-color);
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url('../img/header/call-tel.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__nav-box {
+    margin-bottom: 22px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 35px;
+    padding-top: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--grey-color);
+  }
+
+  &__nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__btn {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 27px 117px 27px 89px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 88px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: url('../img/header/price.svg');
+    }
+  }
+}
