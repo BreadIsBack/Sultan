@@ -14,6 +14,7 @@
   color: var(--light-color);
   background-color: var(--yellow-color);
   cursor: pointer;
+  z-index: 10;
 
   &::before,
   &::after {

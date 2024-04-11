@@ -77,8 +77,7 @@
     }
   }
 
-  &__btn,
-  &__catalog-link {
+  &__link {
     width: fit-content;
     padding: 20px 80px 20px 55px;
     position: relative;
@@ -141,6 +140,5 @@
     background-image: url('../img/header/search-full.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 10;
   }
 }

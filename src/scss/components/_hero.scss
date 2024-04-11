@@ -1,0 +1,127 @@
+.hero {
+  padding-top: 98px;
+  padding-bottom: 94px;
+  background-image: url('../img/hero/hero-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mobile {
+    margin-bottom: 190px;
+    margin-top: var(--header-mobile-height);
+    padding: 55px 0;
+    background-image: url('../img/hero/hero-bg-mobile.png');
+    background-position: center;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__content {
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include mobile {
+      padding: 17px 25px;
+      backdrop-filter: blur(4px);
+      background-image: linear-gradient(to left, rgba(138,148,171,0), rgba(138,148,171,1));
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 110%;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 60px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include mobile {
+      margin: 0;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    margin-bottom: 90px;
+    padding: 36px 88px;
+    width: fit-content;
+    font-size: 18px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @include mobile {
+      position: absolute;
+      flex-direction: column;
+      align-items: flex-start;
+      left: 0;
+      bottom: -170px;
+    }
+  }
+
+  &__item {
+    padding-left: 50px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-image: url('../img/hero/cross.svg');
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &::after {
+      border-radius: 50%;
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 39px;
+      height: 39px;
+      background-color: var(--yellow-color);
+    }
+  }
+
+  &__item-text {
+    line-height: 150%;
+    color: var(--light-color);
+
+    @include mobile {
+      color: var(--grey-color);
+    }
+  }
+}

@@ -1,4 +1,4 @@
 export const getHeaderHeight = () => {
-  const headerHeight = document?.querySelector('.header').offsetHeight;
-  document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
+  const headerMobileHeight = document?.querySelector('.header-mobile').offsetHeight;
+  document.querySelector(':root').style.setProperty('--header-mobile-height', `${headerMobileHeight}px`);
 }

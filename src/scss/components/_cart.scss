@@ -2,13 +2,12 @@
   &__link {
     display: flex;
     align-items: center;
-    counter-reset: cart 0;
   }
 
   &__wrapper {
     position: relative;
 
-    &::after {
+    &::before {
       position: absolute;
       content: '';
       top: 0;
@@ -16,7 +15,6 @@
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      counter-increment: cart 1;
       background-color: var(--yellow-color);
     }
 

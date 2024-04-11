@@ -38,7 +38,8 @@ import { burger } from './functions/burger';
 // const tabs = new GraphTabs('tab');
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
+import { getHeaderHeight } from './functions/header-height';
+getHeaderHeight();
 
 // Подключение плагина кастом-скролла
 // import 'simplebar';

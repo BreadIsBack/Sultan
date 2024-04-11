@@ -1,0 +1,118 @@
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  align-items: center;
+  gap: 21px;
+
+  &__item {
+    padding: 42px 30px 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &::before {
+      padding: 5px 10px;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 5px;
+      position: absolute;
+      top: 30px;
+      left: 15px;
+      content: attr(data-attr);
+      color: var(--light-color);
+      background-color: #1fd85d;
+    }
+  }
+
+  &__item-link {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  &__img {
+    min-height: 100%;
+    margin-bottom: 4px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__size {
+    margin-bottom: 10px;
+    padding-left: 17px;
+    position: relative;
+    font-size: 12px;
+    color: var(--grey-color);
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 15px;
+      background-image: url('../img/catalog/size.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item-descr {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--main-color);
+  }
+
+  &__text-decor {
+    font-weight: 800;
+  }
+
+  &__descr-list {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__descr-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__descr-name {
+    font-weight: 300;
+  }
+
+  &__descr-value {
+    font-weight: 500;
+  }
+
+  &__price-box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__price-value {
+    font-weight: 800;
+    font-size: 16px;
+  }
+
+  &__btn {
+    padding: 16px 57px 16px 25px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url('../img/catalog/price-cart.svg');
+      top: 50%;
+      right: 25px;
+      transform: translateY(-50%);
+
+    }
+  }
+}
