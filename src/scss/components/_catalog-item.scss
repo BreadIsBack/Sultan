@@ -1,9 +1,10 @@
 .catalog-item {
   padding: 42px 30px 30px;
-  // min-height: 490px;
+  min-height: 490px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   &::before {
     padding: 5px 10px;

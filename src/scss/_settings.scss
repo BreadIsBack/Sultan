@@ -71,7 +71,8 @@ p {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -82,6 +83,7 @@ p {
 }
 
 .btn {
+  width: fit-content;
   border-radius: 80px;
   position: relative;
   font-weight: 700;
@@ -151,6 +153,10 @@ p {
 
 .section-margin {
   margin-bottom: 100px;
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
 }
 
 .section-title {
@@ -161,8 +167,14 @@ p {
   font-weight: 500;
   color: var(--main-color);
 
-&--colored {
-  font-weight: 800;
-  color: var(--yellow-color);
+  &--colored {
+    font-weight: 800;
+    color: var(--yellow-color);
+  }
 }
+
+.grid-catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 21px;
 }

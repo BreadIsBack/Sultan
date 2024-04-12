@@ -1,6 +1,9 @@
-import Swiper, {Pagination} from 'swiper';
+import Swiper, {
+  Pagination,
+  Navigation
+} from 'swiper';
 
-Swiper.use([Pagination]);
+Swiper.use([Pagination, Navigation]);
 
 const bullets = document.querySelectorAll('.swiper-pagination-bullet');
 
@@ -22,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     breakpoint = window.matchMedia(breakpoint);
 
-    const enableSwiper = function(className, settings) {
+    const enableSwiper = function (className, settings) {
       swiper = new Swiper(className, settings);
 
       if (callback) {
@@ -30,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const checker = function() {
+    const checker = function () {
       if (breakpoint.matches) {
         return enableSwiper(swiperClass, swiperSettings);
       } else {
@@ -43,29 +46,44 @@ window.addEventListener('DOMContentLoaded', () => {
     checker();
   }
 
-  const someFunc = (instance) => {
-    if (instance) {
-      instance.on('slideChange', function (e) {
-        // console.log('*** mySwiper.activeIndex', instance.activeIndex);
-      });
-    }
-  };
+  // const someFunc = (instance) => {
+  //   if (instance) {
+  //     instance.on('slideChange', function (e) {
 
-  console.log(document.querySelector('.swiper-pagination'))
+  //     });
+  //   }
+  // };
 
   resizableSwiper(
     '(max-width: 576px)',
-    '.swiper-main-page',
-    {
-      spaceBetween: 10,
+    '.swiper-catalog', {
+      // spaceBetween: 10,
       slidesPerView: 1,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-catalog__pagination',
         clickable: true,
         dynamicBullets: true,
-        dynamicMainBullets: 4,
+        dynamicMainBullets: 2,
       },
     },
-    someFunc
+  );
+
+  resizableSwiper(
+    '(min-width: 320px)',
+    '.swiper-promo', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: '.swiper-promo__prev',
+        nextEl: '.swiper-promo__next',
+        clickable: true,
+      },
+      pagination: {
+        el: '.swiper-promo__pagination',
+        clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 3,
+      },
+    },
   );
 });
