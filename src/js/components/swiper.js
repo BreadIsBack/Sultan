@@ -86,4 +86,19 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     },
   );
+
+  resizableSwiper(
+    '(min-width: 320px)',
+    '.swiper-brands', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: '.swiper-brands__pagination',
+        clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 3,
+      },
+    },
+  );
 });

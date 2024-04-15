@@ -50,23 +50,29 @@
   }
 
   &__text {
-    font-weight: 600;
-    line-height: 130%;
-
+    margin: 0;
     &--small {
       font-weight: 300;
       font-size: 12px;
       color: var(--grey-color);
     }
 
+    &--high {
+      font-weight: 600;
+    }
+
     &--margin-bot {
       margin-bottom: 6px;
+    }
+
+    &--underline {
+      text-decoration: underline;
     }
   }
 
   &__email {
+    display: block;
     width: 100%;
-    font-weight: 600;
     color: var(--main-color);
   }
 }

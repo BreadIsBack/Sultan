@@ -1,0 +1,98 @@
+.contacts {
+  &__container {
+    padding: 30px 15px 145px;
+    position: relative;
+
+    @include mobile {
+      padding: 10px 15px 290px;
+    }
+  }
+
+  &__inner {
+    padding: 60px 50px;
+    border-radius: 8px;
+    max-width: 735px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 2;
+
+    @include mobile {
+      padding: 25px 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 40px;
+    color: var(--grey-color);
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--grey-color);
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__address {
+    margin-bottom: 50px;
+  }
+
+  &__address-list {
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__address-item {
+    @include mobile {
+      padding-left: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__tax {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tax-subtitle {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  &__tax-text {
+    color: var(--grey-color);
+  }
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  // min-width: 100%;
+  // min-height: 100%;
+}

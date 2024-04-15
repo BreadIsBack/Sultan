@@ -1,0 +1,14 @@
+.best-products {
+  &__title {
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--grey-color);
+  }
+}

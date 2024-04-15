@@ -1,0 +1,37 @@
+.form-field {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__form-input {
+    padding: 20px;
+    padding-right: 60px;
+    width: 100%;
+    border-radius: 36px;
+    height: 100%;
+    background-color: #ededed;
+    font-size: 12px;
+    cursor: text;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: 150%;
+      color: #5c6370;
+      opacity: 0.6;
+    }
+  }
+
+  &__form-btn {
+    width: 39px;
+    height: 39px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

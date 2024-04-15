@@ -1,0 +1,152 @@
+.footer {
+  padding: 71px 0 116px;
+  background-color: #3f4e65;
+  color: var(--light-color);
+  line-height: 150%;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 600;
+    line-height: 150%;
+    font-size: 20px;
+  }
+
+  &__info {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 16px;
+  }
+
+  &__text-action {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 12px
+  }
+
+  &__nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__nav-link {
+    color: var(--light-color);
+  }
+
+  &__categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__categories-link {
+    color: var(--light-color);
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    margin-bottom: 20px;
+    display: block;
+    padding: 20px 80px 20px 55px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url('../img/header/price.svg');
+      top: 50%;
+      right: 43px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__socials-text {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  &__socials-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__address-tel {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  &__work {
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  &__address-call {
+    font-size: 10px;
+    text-decoration: underline;
+    color: var(--light-color);
+  }
+
+  &__address-email {
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--light-color);
+  }
+
+  &__address-text {
+    margin: 0;
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  &__list-pay {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+  &__form-btn {
+    background-image: url('../img/footer/arrow.svg');
+  }
+}
