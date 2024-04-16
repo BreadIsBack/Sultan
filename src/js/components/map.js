@@ -1,6 +1,6 @@
 const pageWidth = document.documentElement.scrollWidth;
 const pageMap = document.getElementById('map');
-let center = [53.26775245550388,69.40466726710768];
+let center = [53.27583976994932,69.39361160841351];
 let mark = [53.268372261027714,69.40749902513113];
 
 if (pageMap) {
@@ -12,7 +12,6 @@ if (pageMap) {
     });
 
     map.panTo([53.26930096947917,69.40743898781825], {
-      // Задержка между перемещениями.
       delay: 1500
   });
 
@@ -39,4 +38,3 @@ if (pageMap) {
 
 
 }
-

@@ -73,6 +73,24 @@ a {
   /* stylelint-disable-line declaration-no-important */
 }
 
+.link {
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--yellow-color);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:focus {
+    outline: 1px solid var(--grey-color);
+  }
+
+  &:active {
+    color: #684500;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
 .btn-reset {
   border: none;
   padding: 0;
@@ -85,8 +103,25 @@ a {
   border-radius: 80px;
   position: relative;
   font-weight: 700;
+
   color: var(--light-color);
   background-color: var(--yellow-color);
+  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 8px 10px rgba(203, 171, 108, 0.4);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  &:focus {
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  &:active {
+    background-color: #175654;
+    transition: background-color 0.3s ease-in-out;
+  }
 }
 
 .list-reset {
