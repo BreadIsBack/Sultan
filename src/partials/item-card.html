@@ -1,7 +1,7 @@
 <section class="item-card section-margin">
   <div class="container item-card__container">
     <nav class="nav item-card__breadcrumbs breadcrumbs" aria-label="Хлебные крошки">
-      <ul class="list-reset nav__list breadcrumbs__list">
+      <ul class="nav__list breadcrumbs__list list-reset">
         <li class="nav__item breadcrumbs__item">
           <a href="#" class="nav__link link">
               Главная
@@ -30,25 +30,27 @@
       </ul>
     </nav>
     <div class="item-wrapper">
-      <picture>
-        <source srcset="/img/item/image-1.webp" type="image/webp">
-        <img loading="lazy" src="/img/item/image-1.jpg" class="image item-wrapper__img" width="664" height="300" alt="BioMio BIO-SOAP Экологичное туалетное мыло">
-      </picture>
+      <div class="item-wrapper__img-box">
+        <picture>
+          <source srcset="/img/item/image-1.webp" type="image/webp">
+          <img loading="lazy" src="/img/item/image-1.jpg" class="image item-wrapper__img" width="664" height="300" alt="BioMio BIO-SOAP Экологичное туалетное мыло">
+        </picture>
+      </div>
       <div class="item-wrapper__content">
         <span class="item-wrapper__stock">В наличии</span>
         <a class="item-link">
-          <p class="item-link__text"><span class="item-link__word">BioMio BIO-SOAP </span>Экологичное туалетное
+          <p class="item-link__text item-wrapper__text"><span class="item-link__word item-wrapper__word">BioMio BIO-SOAP </span>Экологичное туалетное
             мыло. Литсея и бергамот</p>
         </a>
-        <p class="item-wrapper__size item-size">90 г</p>
+        <p class="item-wrapper__size item-size item-size--stock">90 г</p>
         <div class="item-wrapper__price-content">
           <span class="item-wrapper__price">48,76Р</span>
           <div class="item-wrapper__price-btns">
-            <button class="item-wrapper__btn item-wrapper__btn--min">-</button>
-            <span class="item-wrapper__counter"></span>
-            <button class="item-wrapper__btn item-wrapper__btn--max">+</button>
+            <button class="item-wrapper__btn btn-reset item-wrapper__btn--min">-</button>
+            <span class="item-wrapper__counter">1</span>
+            <button class="item-wrapper__btn btn-reset item-wrapper__btn--max">+</button>
           </div>
-          <button class="item-wrapper__btn btn btn-reset">В корзину</button>
+          <button class="item-wrapper__btn-action btn btn-reset">В корзину</button>
         </div>
         <div class="item-wrapper__info">
           <a href="#" class="item-wrapper__info-link">
@@ -57,9 +59,13 @@
             </svg>
           </a>
           <p class="item-wrapper__info-text">
-            При покупке от 10 000 ₸ бесплатная доставка по Кокчетаву и области
+            При покупке от <span class="item-wrapper__info-price">10 000 ₸ </span>бесплатная доставка по Кокчетаву и области
           </p>
-          <a href="#" class="item-wrapper__link-price btn-reset" download>Прайс-лист</a>
+          <a href="#" class="item-wrapper__link-price" download>Прайс-лист
+            <svg class="item-wrapper__link-svg">
+              <use xlink:href="img/sprite.svg#download"></use>
+            </svg>
+          </a>
         </div>
         <ul class="item-wrapper__descr-list item-descr list-reset">
           <li class="item-descr__item">
@@ -93,7 +99,7 @@
         </ul>
         <ul class="item-wrapper__accordion-list list-reset">
           <li class="item-wrapper__accordion-item">
-            <button class="item-wrapper__accordion-btn">
+            <button class="item-wrapper__accordion-btn btn-reset">
               <p class="item-wrapper__accordion-descr">Описание</p>
               <svg class="item-wrapper__accordion-svg">
                 <use xlink:href="img/sprite.svg#arrow"></use>
@@ -106,51 +112,53 @@
             </div>
           </li>
           <li class="item-wrapper__accordion-item">
-            <button class="item-wrapper__accordion-btn">
+            <button class="item-wrapper__accordion-btn btn-reset">
               <p class="item-wrapper__accordion-descr">Характеристики</p>
               <svg class="item-wrapper__accordion-svg">
                 <use xlink:href="img/sprite.svg#arrow"></use>
               </svg>
             </button>
             <div class="item-wrapper__accordion-content">
-              <ul class="item-wrapper__descr-list item-descr list-reset">
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Назначение::</p>
-                  <p class="item-descr__value">BioMio</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Тип:</p>
-                  <p class="item-descr__value">BioMio</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Производитель:</p>
-                  <p class="item-descr__value">460404</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Бренд:</p>
-                  <p class="item-descr__value">4604049097548</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Артикул:</p>
-                  <p class="item-descr__value">4604049097548</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Штрихкод:</p>
-                  <p class="item-descr__value">4604049097548</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Вес:</p>
-                  <p class="item-descr__value">90 г</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Объем:</p>
-                  <p class="item-descr__value">90 г</p>
-                </li>
-                <li class="item-descr__item">
-                  <p class="item-descr__name">Кол-во в коробке:</p>
-                  <p class="item-descr__value">90 г</p>
-                </li>
-              </ul>
+              <div class="item-wrapper__accordion-wrapper">
+                <ul class="item-wrapper__descr-list item-descr list-reset">
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Назначение:</p>
+                    <p class="item-descr__value">BioMio</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Тип:</p>
+                    <p class="item-descr__value">BioMio</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Производитель:</p>
+                    <p class="item-descr__value">460404</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Бренд:</p>
+                    <p class="item-descr__value">4604049097548</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Артикул:</p>
+                    <p class="item-descr__value">4604049097548</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Штрихкод:</p>
+                    <p class="item-descr__value">4604049097548</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Вес:</p>
+                    <p class="item-descr__value">90 г</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Объем:</p>
+                    <p class="item-descr__value">90 г</p>
+                  </li>
+                  <li class="item-descr__item">
+                    <p class="item-descr__name">Кол-во в коробке:</p>
+                    <p class="item-descr__value">90 г</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
         </ul>

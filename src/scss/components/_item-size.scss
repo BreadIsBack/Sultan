@@ -16,4 +16,13 @@
     background-image: url('../img/catalog/size.svg');
     background-repeat: no-repeat;
   }
+
+  &--stock {
+    padding-left: 25px;
+    &:before {
+      width: 20px;
+      height: 16px;
+      background-image: url('../img/item/stock.svg');
+    }
+  }
 }
