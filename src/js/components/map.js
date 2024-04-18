@@ -18,7 +18,7 @@ if (pageMap) {
     let placemark = new ymaps.Placemark(mark, {}, {
       iconLayout: 'default#image',
       iconImageHref: '../img/placemark.png',
-      icomImageSize: [20, 20],
+      iconImageSize: [30, 30],
       iconImageOffset: [0, 0],
     });
 
@@ -35,6 +35,4 @@ if (pageMap) {
   }
 
   ymaps.ready(init);
-
-
 }

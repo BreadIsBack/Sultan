@@ -1,0 +1,19 @@
+.item-size {
+  margin: 0;
+  padding-left: 17px;
+  position: relative;
+  font-size: 12px;
+  color: var(--grey-color);
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 15px;
+    background-image: url('../img/catalog/size.svg');
+    background-repeat: no-repeat;
+  }
+}

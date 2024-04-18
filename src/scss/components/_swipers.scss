@@ -39,6 +39,10 @@
   }
 }
 
+.swiper-slide {
+  box-sizing: border-box;
+}
+
 .swiper-catalog {
   width: 100%;
 
@@ -48,11 +52,6 @@
       display: flex;
       column-gap: 0;
     }
-  }
-
-  &__slide {
-    height: auto;
-    display: flex;
   }
 
   .swiper-pagination-bullets.swiper-pagination-horizontal {

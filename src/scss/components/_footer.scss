@@ -8,6 +8,8 @@
     padding: 15px 0;
   }
 
+  &
+
   &__container {
     display: flex;
     // align-items: flex-start;
@@ -17,6 +19,10 @@
     @include tablet {
       flex-wrap: wrap;
       justify-content: center;
+    }
+
+    @include mobile {
+      justify-content: flex-start;
     }
   }
 
@@ -32,6 +38,12 @@
     max-width: 320px;
     display: flex;
     flex-direction: column;
+  }
+
+  &__info-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
@@ -82,6 +94,12 @@
   &__socials {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      flex: 1;
+      padding-top: 55px;
+      order: 1;
+    }
   }
 
   &__link {
@@ -98,6 +116,29 @@
       transform: translateY(-50%);
       background-repeat: no-repeat;
       background-size: cover;
+
+      @include mobile {
+        right: 20px;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mobile {
+        padding: 13px 48px 13px 30px;
+        display: block;
+      }
+    }
+  }
+
+  &__socials-title {
+    @include mobile {
+      display: none;
     }
   }
 

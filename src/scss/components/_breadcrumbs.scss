@@ -1,0 +1,20 @@
+.breadcrumbs {
+
+  &__item {
+    font-weight: 300;
+    line-height: 120%;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+      padding-right: 10px;
+      border-right: 1px dotted var(--grey-color);
+    }
+  }
+
+  &__item[aria-current] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+

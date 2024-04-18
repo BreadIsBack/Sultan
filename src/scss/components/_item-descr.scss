@@ -1,0 +1,21 @@
+.item-descr {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__name {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  &__value {
+    margin: 0;
+    font-weight: 500;
+  }
+}

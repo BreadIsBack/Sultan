@@ -18,6 +18,35 @@ bullets.forEach(bullet => {
   })
 });
 
+const swiperBrands = new Swiper('.swiper-brands', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: '.swiper-brands__pagination',
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 3,
+  },
+});
+
+const swiperPromo = new Swiper('.swiper-promo', {
+  spaceBetween: 10,
+  slidesPerView: 1,
+  navigation: {
+    prevEl: '.swiper-promo__prev',
+    nextEl: '.swiper-promo__next',
+    clickable: true,
+  },
+  pagination: {
+    el: '.swiper-promo__pagination',
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 3,
+  },
+});
+
 window.addEventListener('DOMContentLoaded', () => {
 
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
@@ -68,37 +97,37 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   );
 
-  resizableSwiper(
-    '(min-width: 320px)',
-    '.swiper-promo', {
-      spaceBetween: 10,
-      slidesPerView: 1,
-      navigation: {
-        prevEl: '.swiper-promo__prev',
-        nextEl: '.swiper-promo__next',
-        clickable: true,
-      },
-      pagination: {
-        el: '.swiper-promo__pagination',
-        clickable: true,
-        dynamicBullets: true,
-        dynamicMainBullets: 3,
-      },
-    },
-  );
+  // resizableSwiper(
+  //   '(min-width: 320px)',
+  //   '.swiper-promo', {
+  //     spaceBetween: 10,
+  //     slidesPerView: 1,
+  //     navigation: {
+  //       prevEl: '.swiper-promo__prev',
+  //       nextEl: '.swiper-promo__next',
+  //       clickable: true,
+  //     },
+  //     pagination: {
+  //       el: '.swiper-promo__pagination',
+  //       clickable: true,
+  //       dynamicBullets: true,
+  //       dynamicMainBullets: 3,
+  //     },
+  //   },
+  // );
 
-  resizableSwiper(
-    '(min-width: 320px)',
-    '.swiper-brands', {
-      spaceBetween: 10,
-      slidesPerView: 1,
-      loop: true,
-      pagination: {
-        el: '.swiper-brands__pagination',
-        clickable: true,
-        dynamicBullets: true,
-        dynamicMainBullets: 3,
-      },
-    },
-  );
+  // resizableSwiper(
+  //   '(min-width: 320px)',
+  //   '.swiper-brands', {
+  //     spaceBetween: 10,
+  //     slidesPerView: 1,
+  //     loop: true,
+  //     pagination: {
+  //       el: '.swiper-brands__pagination',
+  //       clickable: true,
+  //       dynamicBullets: true,
+  //       dynamicMainBullets: 3,
+  //     },
+  //   },
+  // );
 });

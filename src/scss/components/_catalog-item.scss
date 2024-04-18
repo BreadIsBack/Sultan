@@ -1,10 +1,9 @@
 .catalog-item {
   padding: 42px 30px 30px;
-  min-height: 490px;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   &::before {
     padding: 5px 10px;
@@ -34,69 +33,19 @@
   }
 
   &__size {
-    margin: 0;
     margin-bottom: 10px;
-    padding-left: 17px;
-    position: relative;
-    font-size: 12px;
-    color: var(--grey-color);
-
-    &::before {
-      position: absolute;
-      content: '';
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      width: 9px;
-      height: 15px;
-      background-image: url('../img/catalog/size.svg');
-      background-repeat: no-repeat;
-    }
   }
 
   &__text-link {
-    margin: 0;
     margin-bottom: 20px;
-    display: flex;
-    flex: 1 1 auto;
-  }
-
-  &__item-descr {
-    margin: 0;
-    font-weight: 500;
-    font-size: 16px;
-    color: var(--main-color);
-  }
-
-  &__text-decor {
-    margin: 0;
-    font-weight: 800;
   }
 
   &__descr-list {
     margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  &__descr-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  &__descr-name {
-    margin: 0;
-    font-weight: 300;
-  }
-
-  &__descr-value {
-    margin: 0;
-    font-weight: 500;
   }
 
   &__price-box {
+    margin-top: auto;
     display: flex;
     align-items: center;
     gap: 40px;

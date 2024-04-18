@@ -13,6 +13,11 @@
 @import "./components/swipers";
 @import "./components/brands";
 @import "./components/form-field";
+@import "./components/item-link";
+@import "./components/item-size";
+@import "./components/item-descr";
+@import "./components/breadcrumbs";
+@import "./components/item-wrapper";
 
 // подключения больших компонентов страницы
 @import "./components/header";
@@ -24,4 +29,5 @@
 @import "./components/promo";
 @import "./components/best-products";
 @import "./components/contacts";
+@import "./components/item-card";
 @import "./components/footer";
