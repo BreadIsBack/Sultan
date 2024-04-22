@@ -68,6 +68,18 @@
   // }
 }
 
+.swiper-catalog-watched {
+  width: 100%;
+
+  &__wrapper {
+
+    @include mobile {
+      display: flex;
+      column-gap: 0;
+    }
+  }
+}
+
 .swiper-promo {
   .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 15px;

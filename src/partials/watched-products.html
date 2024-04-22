@@ -1,0 +1,12 @@
+<section class="watched-products section-margin">
+  <div class="container watched-products__container">
+    <h2 class="watched-products__title section-title"><b class="watched-products__span section-title--colored"><span class="watched-products__title-word">Недавно </span>просмотренные </b>товары
+    </h2>
+    <div class="swiper swiper-catalog-watched">
+      <div class="swiper-wrapper swiper-catalog-watched__wrapper grid-catalog">
+        @loop('card.html', './resources/watched-products.json')
+      </div>
+      <div class="swiper-catalog-watched__pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>

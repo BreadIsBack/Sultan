@@ -1,0 +1,33 @@
+<div class="swiper-slide swiper-catalog__slide">
+  <li class="catalog-item" data-attr="Популярное">
+    <a href="product-card.html" class="catalog-item__link">
+      <picture>
+        <source srcset="img/catalog/desktop/@img.webp" type="image/webp">
+        <source srcset="./img/catalog/mobile/@img.png" media="(max-width: 576px)">
+        <img loading="lazy" src="img/catalog/desktop/@img.png" class="image catalog-item__img" height="194" alt="AOS Ср-во для мытья посуды Апельсин+мята">
+      </picture>
+    </a>
+    <p class="catalog-item__size item-size">@size</p>
+      <a href="product-card.html" class="item-link catalog-item__text-link">
+        <p class="item-link__text"><span class="item-link__word">@title</span>@title-text</p>
+      </a>
+      <ul class="catalog-item__descr-list item-descr list-reset">
+        <li class="item-descr__item">
+          <p class="item-descr__name">@code</p>
+          <p class="item-descr__value">@code-number</p>
+        </li>
+        <li class="item-descr__item">
+          <p class="item-descr__name">@producer</p>
+          <p class="item-descr__value">@producer-name</p>
+        </li>
+        <li class="item-descr__item">
+          <p class="item-descr__name">@brand</p>
+          <p class="item-descr__value">@brand-name</p>
+        </li>
+      </ul>
+      <div class="catalog-item__price-box">
+        <span class="catalog-item__price-value">@price</span>
+        <button class="catalog-item__btn btn btn-reset">В корзину</button>
+      </div>
+  </li>
+</div>

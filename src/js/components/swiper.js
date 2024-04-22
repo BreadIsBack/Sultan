@@ -1,6 +1,7 @@
 import Swiper, {
   Pagination,
-  Navigation
+  Navigation,
+  FreeMode
 } from 'swiper';
 
 Swiper.use([Pagination, Navigation]);
@@ -78,24 +79,42 @@ window.addEventListener('DOMContentLoaded', () => {
   // const someFunc = (instance) => {
   //   if (instance) {
   //     instance.on('slideChange', function (e) {
-
+  //       console.log('dsf')
   //     });
   //   }
   // };
 
-  resizableSwiper(
-    '(max-width: 576px)',
-    '.swiper-catalog', {
-      // spaceBetween: 10,
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-catalog__pagination',
-        clickable: true,
-        dynamicBullets: true,
-        dynamicMainBullets: 2,
+  if (document.querySelector('.swiper-catalog')) {
+    resizableSwiper(
+      '(max-width: 576px)',
+      '.swiper-catalog', {
+        // spaceBetween: 10,
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-catalog__pagination',
+          clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
+        },
       },
-    },
-  );
+    );
+  }
+
+  if(document.querySelector('.swiper-catalog-watched')) {
+    resizableSwiper(
+      '(max-width: 576px)',
+      '.swiper-catalog-watched', {
+        // spaceBetween: 10,
+        slidesPerView: 1,
+        pagination: {
+          el: '.swiper-catalog-watched__pagination',
+          clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets: 2,
+        },
+      },
+    );
+  }
 
   // resizableSwiper(
   //   '(min-width: 320px)',

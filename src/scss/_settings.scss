@@ -211,3 +211,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 21px;
 }
+
+.section-header-offset {
+  margin-top: var(--header-mobile-height);
+}

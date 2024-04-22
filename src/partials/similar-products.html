@@ -1,0 +1,12 @@
+<section class="similar-products section-margin">
+  <div class="container similar-products__container">
+    <h2 class="similar-products__title section-title"><b class="similar-products__span section-title--colored">Похожие </b>товары
+    </h2>
+    <div class="swiper swiper-catalog">
+      <div class="swiper-wrapper swiper-catalog__wrapper grid-catalog">
+        @loop('card.html', './resources/similar-products.json')
+      </div>
+      <div class="swiper-catalog__pagination swiper-pagination"></div>
+    </div>
+  </div>
+</section>

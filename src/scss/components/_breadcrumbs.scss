@@ -1,5 +1,10 @@
 .breadcrumbs {
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &__item {
     font-weight: 300;
     line-height: 120%;

@@ -18,6 +18,7 @@
 @import "./components/item-descr";
 @import "./components/breadcrumbs";
 @import "./components/item-wrapper";
+@import "./components/modals";
 
 // подключения больших компонентов страницы
 @import "./components/header";
@@ -30,4 +31,6 @@
 @import "./components/best-products";
 @import "./components/contacts";
 @import "./components/item-card";
+@import "./components/similar-products";
+@import "./components/watched-products";
 @import "./components/footer";

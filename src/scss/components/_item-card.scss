@@ -1,5 +1,9 @@
 .item-card {
   &__breadcrumbs {
     margin-bottom: 65px;
+
+    @include mobile {
+      margin-bottom: 25px;
+    }
   }
 }

@@ -1,0 +1,56 @@
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-price">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="modal-price">
+        <h2 class="modal-price__title">Куда прислать оптовый прайс-лист?</h2>
+        <p class="modal-price__text">
+          Получите оптовый прайс лист с лучшими ценами в Акмолинской области
+        </p>
+        <form class="modal-price__form">
+          <label class="modal-price__label">Имя*
+            <input type="text" class="modal-price__input input-reset" placeholder="Введите ваше имя" required>
+          </label>
+          <label class="modal-price__label">E-mail*
+            <input type="email" class="modal-price__input input-reset" placeholder="Введите ваш E-mail" required>
+          </label>
+          <label class="modal-price__label">Телефон*
+            <input type="tel" class="modal-price__input input-reset" placeholder="Введите ваш телефон" required>
+          </label>
+          <label class="modal-price__label">Название организации
+            <input type="text" class="modal-price__input input-reset" placeholder="Введите название организации"
+              required>
+          </label>
+          <div class="modal-price__form-action">
+            <p class="modal-price__form-question">Куда отправить прайс-лист?</p>
+            <div class="modal-price__form-socials">
+              <ul class="modal-price__form-list list-reset">
+                <li class="modal-price__form-item modal-price__form-item--whatsapp">
+                  <label class="modal-price__socials-label">WhatsApp
+                    <input type="checkbox" class="modal-price__socials-input input-reset">
+                    <span class="modal-price__checkbox-span">
+                      <svg class="modal-price__svg">
+                        <use xlink:href="img/sprite.svg#whatsapp-form"></use>
+                      </svg>
+                    </span>
+                  </label>
+                </li>
+                <li class="modal-price__form-item modal-price__form-item--email">
+                  <label class="modal-price__socials-label">E-mail
+                    <input type="checkbox" class="modal-price__socials-input input-reset">
+                    <span class="modal-price__checkbox-span">
+                      <svg class="modal-price__svg">
+                        <use xlink:href="img/sprite.svg#email-form"></use>
+                      </svg>
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="modal-price__form-btn btn btn-reset">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

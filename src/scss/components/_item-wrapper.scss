@@ -1,8 +1,18 @@
 .item-wrapper {
   display: flex;
 
+  @include small-tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__img-box {
     margin-right: 40px;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 
   &__content {
@@ -22,6 +32,10 @@
     font-weight: 400;
     line-height: 150%;
     font-size: 30px;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__word {
@@ -34,20 +48,34 @@
 
   &__price-content {
     margin-bottom: 20px;
+    max-width: 490px;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      gap: 10px;
+    }
   }
 
   &__price {
     margin-right: 40px;
     font-weight: 800;
     font-size: 30px;
+
+    @include mobile{
+      font-size: 20px;
+      margin-right: 0;
+    }
   }
 
   &__price-btns {
     margin-right: 38px;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      margin-right: 0;
+    }
   }
 
   &__counter {
@@ -61,6 +89,7 @@
     width: 34px;
     height: 23px;
     background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 100%);
+    color: var(--grey-color);
 
     &--max {
       padding: 4px 12px;
@@ -90,6 +119,11 @@
     &:hover {
       color: var(--grey-color);
     }
+
+    @include mobile {
+      width: 59px;
+      height: 50px;
+    }
   }
 
   &__info-svg {
@@ -115,6 +149,7 @@
     display: flex;
     align-items: center;
     font-weight: 700;
+    font-size: 14px;
     color: var(--grey-color);
     transition: color 0.3s ease-in-out;
 
@@ -160,6 +195,7 @@
   &__accordion-btn {
     display: flex;
     align-items: center;
+    color: var(--main-color);
   }
 
   &__accordion-descr {
