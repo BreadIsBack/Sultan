@@ -7,18 +7,18 @@
         <p class="modal-price__text">
           Получите оптовый прайс лист с лучшими ценами в Акмолинской области
         </p>
-        <form class="modal-price__form">
+        <form action="https://my-json-server.typicode.com/typicode/demo/posts" method="post" class="modal-price__form">
           <label class="modal-price__label">Имя*
-            <input type="text" class="modal-price__input input-reset" placeholder="Введите ваше имя" required>
+            <input type="text" class="modal-price__input input-reset" name="Имя" placeholder="Введите ваше имя" required>
           </label>
           <label class="modal-price__label">E-mail*
-            <input type="email" class="modal-price__input input-reset" placeholder="Введите ваш E-mail" required>
+            <input type="email" class="modal-price__input input-reset" name="Email" placeholder="Введите ваш E-mail" required>
           </label>
           <label class="modal-price__label">Телефон*
-            <input type="tel" class="modal-price__input input-reset" placeholder="Введите ваш телефон" required>
+            <input type="tel" class="modal-price__input input-reset" name="Телефон" placeholder="Введите ваш телефон" required>
           </label>
           <label class="modal-price__label">Название организации
-            <input type="text" class="modal-price__input input-reset" placeholder="Введите название организации"
+            <input type="text" class="modal-price__input input-reset" name="Организация" placeholder="Введите название организации"
               required>
           </label>
           <div class="modal-price__form-action">
@@ -27,7 +27,7 @@
               <ul class="modal-price__form-list list-reset">
                 <li class="modal-price__form-item modal-price__form-item--whatsapp">
                   <label class="modal-price__socials-label">WhatsApp
-                    <input type="checkbox" class="modal-price__socials-input input-reset">
+                    <input type="checkbox" class="modal-price__socials-input input-reset" name="Способ отправки[]" value="WhatsApp">
                     <span class="modal-price__checkbox-span">
                       <svg class="modal-price__svg">
                         <use xlink:href="img/sprite.svg#whatsapp-form"></use>
@@ -37,7 +37,7 @@
                 </li>
                 <li class="modal-price__form-item modal-price__form-item--email">
                   <label class="modal-price__socials-label">E-mail
-                    <input type="checkbox" class="modal-price__socials-input input-reset">
+                    <input type="checkbox" class="modal-price__socials-input input-reset" name="Способ отправки[]" value="E-mail">
                     <span class="modal-price__checkbox-span">
                       <svg class="modal-price__svg">
                         <use xlink:href="img/sprite.svg#email-form"></use>
@@ -48,7 +48,7 @@
               </ul>
             </div>
           </div>
-          <button class="modal-price__form-btn btn btn-reset">Отправить</button>
+          <button type="submit" class="modal-price__form-btn btn btn-reset">Отправить</button>
         </form>
       </div>
     </div>

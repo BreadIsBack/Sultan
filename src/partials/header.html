@@ -49,9 +49,11 @@
           <img loading="lazy" src="img/logo.png" class="image" width="156" height="66" alt="Логотип компании Султан">
         </picture>
       </a>
-      <a href="#" class="header__link btn header__link--catalog">Каталог</a>
+      <a href="catalog.html" class="header__link btn header__link--catalog">Каталог</a>
         <form class="form-field header__form">
-          <input class="input-reset form-field__form-input header__form-input" type="text" placeholder="Поиск...">
+          <label class="form-field__label header__form-label">
+            <input class="input-reset form-field__form-input header__form-input" type="text" placeholder="Поиск...">
+          </label>
           <button class="btn-reset form-field__form-btn header__form-btn" type="submit"></button>
         </form>
       <div class="call-box">
@@ -62,7 +64,7 @@
         </div>
         <img class="call-box__img" src="img/header/call.jpg" alt="Девушка с микрофоном и гарнитурой">
       </div>
-      <button href="#" class="header__link btn-reset btn header__link--price" data-graph-path="modal-price">Прайс-лист</button>
+      <button class="header__link btn-reset btn header__link--price" data-graph-path="modal-price">Прайс-лист</button>
       <div class="cart">
         <a href="#" class="cart__link">
           <div class="cart__wrapper cart-wrapper--header">
@@ -106,9 +108,11 @@
       </div>
     </div>
     <div class="header-mobile__bottom">
-      <a href="" class="header-mobile__catalog-link">Каталог</a>
+      <a href="catalog.html" class="header-mobile__catalog-link">Каталог</a>
       <form class="header-mobile__form">
-        <input class="input-reset header-mobile__form-input" type="text" placeholder="Поиск">
+        <label class="header-mobile__form-label">
+          <input class="input-reset header-mobile__form-input" type="search" placeholder="Поиск">
+        </label>
         <button class="btn-reset header-mobile__form-btn" type="submit"></button>
       </form>
     </div>
@@ -160,7 +164,7 @@
           </ul>
         </nav>
       </div>
-      <a href="#" class="header-mobile__link btn-reset btn header__limk--price" download="">Прайс-лист</a>
+      <button class="header-mobile__btn btn-reset btn" data-graph-path="modal-price">Прайс-лист</button>
     </div>
   </div>
 </header>

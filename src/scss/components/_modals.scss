@@ -93,6 +93,10 @@
       color: #5c6370;
       opacity: 0.6;
     }
+
+    &:placeholder-shown {
+      text-overflow: ellipsis;
+    }
   }
 
   &__form-question {
@@ -103,11 +107,6 @@
     line-height: 150%;
   }
 
-  &__form-socials {
-    display: flex;
-    align-items: center;
-  }
-
   &__form-list {
     display: flex;
     align-items: center;
@@ -115,6 +114,7 @@
   }
 
   &__form-item {
+    width: 50%;
     border-radius: 79px;
     overflow: hidden;
 

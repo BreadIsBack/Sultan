@@ -1,0 +1,479 @@
+<section class="cosmetics section-margin">
+  <div class="container cosmetics__container">
+    <nav class="nav cosmetics__breadcrumbs breadcrumbs" aria-label="Хлебные крошки">
+      <ul class="nav__list breadcrumbs__list list-reset">
+        <li class="nav__item breadcrumbs__item">
+          <a href="index.html" class="nav__link link">
+            Главная
+          </a>
+        </li>
+        <li class="nav__item breadcrumbs__item" aria-current="page">
+          <a href="#" class="nav__link link">
+            Косметика и гигиена
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="cosmetics__top">
+      <h1 class="cosmetics__title">Косметика и гигиена</h1>
+      <span class="cosmetics__view">Название</span>
+    </div>
+    <ul class="cosmetics__list catalog-categories list-reset">
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Уход за телом</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Уход за руками</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Уход за ногами</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Уход за лицом</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Уход за волосами</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Средства для загара</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Средства для бритья</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Подарочные наборы</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Гигиеническая продукция</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Гигиена полости рта</a>
+      </li>
+      <li class="catalog-categories__item">
+        <a href="#" class="catalog-categories__link link">Бумажная продукция</a>
+      </li>
+    </ul>
+    <div class="catalog-content">
+      <aside class="catalog-content__aside">
+        <h2 class="catalog-content__aside-title">ПОДБОР ПО ПАРАМЕТРАМ</h2>
+        <form class="catalog-content__form" action="https://my-json-server.typicode.com/typicode/demo/posts"
+          method="post">
+          <fieldset class="catalog-content__fieldset">
+            <legend class="catalog-content__legend visually-hidden">Диапазон цен</legend>
+            <p class="catalog-content__price">Цена <span class="catalog-content__currency">₸</span></p>
+            <div class="catalog-content__price-box">
+              <label class="catalog-content__label">
+                <input class="catalog-content__input-range input-reset catalog-content__input" name="Сумма[]"
+                  type="number">
+              </label>
+              <span class="catalog-content__input-digit">-</span>
+              <label class="catalog-content__label">
+                <input class="catalog-content__input-range input-reset catalog-content__input" name="Сумма[]"
+                  type="number">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="catalog-content__fieldset">
+            <legend class="catalog-content__legend">Производитель</legend>
+            <div class="catalog-content__checkbox-wrapper">
+              <label class="catalog-content__label catalog-content__label--producer">
+                <input type="checkbox" class="catalog-content__checkbox" name="Производитель[]" value="Grifon">
+                <span class="catalog-content__checkbox-name">Grifon</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--producer">
+                <input type="checkbox" class="catalog-content__checkbox" name="Производитель[]" value="Boyscout">
+                <span class="catalog-content__checkbox-name">Boyscout</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--producer">
+                <input type="checkbox" class="catalog-content__checkbox" name="Производитель[]" value="Paclan">
+                <span class="catalog-content__checkbox-name">Paclan</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--producer">
+                <input type="checkbox" class="catalog-content__checkbox" name="Производитель[]" value="Булгари Грин">
+                <span class="catalog-content__checkbox-name">Булгари Грин</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--producer">
+                <input type="checkbox" class="catalog-content__checkbox" name="Производитель[]" value="Булгари Грин">
+                <span class="catalog-content__checkbox-name">Астер</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--producer">
+                <input type="checkbox" class="catalog-content__checkbox" name="Производитель[]" value="Булгари Грин">
+                <span class="catalog-content__checkbox-name">Фанатик</span>
+              </label>
+            </div>
+            <button class="catalog-content__btn-more catalog-content__btn-more--producer btn-reset">Показать все
+              <svg class="catalog-content__svg">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </fieldset>
+          <fieldset class="catalog-content__fieldset">
+            <legend class="catalog-content__legend">Бренд</legend>
+            <div class="catalog-content__checkbox-wrapper">
+              <label class="catalog-content__label catalog-content__label--brand">
+                <input type="checkbox" class="catalog-content__checkbox" name="Бренд[]" value="Nivea">
+                <span class="catalog-content__checkbox-name">Nivea</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--brand">
+                <input type="checkbox" class="catalog-content__checkbox" name="Бренд[]" value="GRIFON">
+                <span class="catalog-content__checkbox-name">GRIFON</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--brand">
+                <input type="checkbox" class="catalog-content__checkbox" name="Бренд[]" value="Домашний сундук">
+                <span class="catalog-content__checkbox-name">Домашний сундук</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--brand">
+                <input type="checkbox" class="catalog-content__checkbox" name="Бренд[]" value="HELP">
+                <span class="catalog-content__checkbox-name">HELP</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--brand">
+                <input type="checkbox" class="catalog-content__checkbox" name="Бренд[]" value="HELP">
+                <span class="catalog-content__checkbox-name">FLEX</span>
+              </label>
+              <label class="catalog-content__label catalog-content__label--brand">
+                <input type="checkbox" class="catalog-content__checkbox" name="Бренд[]" value="HELP">
+                <span class="catalog-content__checkbox-name">Скай Винтаж</span>
+              </label>
+            </div>
+            <button class="catalog-content__btn-more catalog-content__btn-more--brand btn-reset">Показать все
+              <svg class="catalog-content__svg">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </fieldset>
+          <div class="catalog-content__form-btns">
+            <button class="catalog-content__btn catalog-content__btn--submit btn btn-reset"
+              type="submit">Показать</button>
+            <button class="catalog-content__btn catalog-content__btn--reset btn btn-reset"></button>
+          </div>
+        </form>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Уход за телом</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Эпиляция и депиляция</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства для ванны и душа</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Скрабы, пилинги и пр.</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Мочалки и губки для тела</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Кремы, лосьоны, масла</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Интимный уход</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Дезодоранты, антиперспиранты</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Гели для душа</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Уход за руками</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Увлажнение и питание</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства для ногтей</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Мыло твердое</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Мыло жидкое</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Крем для рук</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Защита рук</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Жидкость для снятия лака</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Уход за ногами</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Скрабы, пилинги</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Крем для ног</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Дезодоранты для ног</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Уход за лицом</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Тональные средства</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства для снятия макияжа</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства для очищения</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Маски, скрабы, сыворотки</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Крем для лица</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Крем для век</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Жидкость для снятия макияжа</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Гигиеническая помада</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Уход за волосами</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Шампуни</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства для укладки</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства для окрашивания волос</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Маски, сыворотки, масла</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Кондиционеры, бальзамы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Средства для загара</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Средства после загара</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Средства для бритья</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Станки и кассеты</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">После бритья</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Для бритья</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Подарочные наборы</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Для мужчин</a>
+            </li>
+            <li class="catalog-content__item">
+              <a href="#" class="catalog-content__link link">Для женщин</a>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog-content__categories-box">
+          <h2 class="catalog-content__aside-title">Бренды</h2>
+          <ul class="catalog-content__list list-reset">
+            <li class="catalog-content__item">
+              <picture>
+                <source srcset="img/brands/air.webp" type="image/webp">
+                <img loading="lazy" src="img/brands/air.png" class="image catalog-content__brands-img" width="82"
+                  height="88" alt="Логотип компании Air Wick">
+              </picture>
+            </li>
+            <li class="catalog-content__item">
+              <picture>
+                <source srcset="img/brands/master.webp" type="image/webp">
+                <img loading="lazy" src="img/brands/master.png" class="image catalog-content__brands-img" width="82"
+                  height="88" alt="Логотип компании Master Fresh">
+              </picture>
+            </li>
+            <li class="catalog-content__item">
+              <picture>
+                <source srcset="img/brands/sibior.webp" type="image/webp">
+                <img loading="lazy" src="img/brands/sibior.png" class="image catalog-content__brands-img" width="82"
+                  height="88" alt="Логотип компании Сибиор">
+              </picture>
+            </li>
+            <li class="catalog-content__item">
+              <picture>
+                <source srcset="img/brands/cotton.webp" type="image/webp">
+                <img loading="lazy" src="img/brands/cotton.png" class="image catalog-content__brands-img" width="82"
+                  height="88" alt="Логотип компании Cotton Club">
+              </picture>
+            </li>
+            <li class="catalog-content__item">
+              <picture>
+                <source srcset="img/brands/Camay.webp" type="image/webp">
+                <img loading="lazy" src="img/brands/Camay.png" class="image catalog-content__brands-img" width="82"
+                  height="88" alt="Логотип компании Camay">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <div class="catalog-content__products">
+        <div class="catalog-content__products-items grid-catalog">
+          <article class="catalog-item" data-attr="Популярное">
+            <a href="product-card.html" class="catalog-item__link">
+              <picture>
+                <source srcset="img/catalog/desktop/01.webp" type="image/webp">
+                <source srcset="./img/catalog/mobile/01.png" media="(max-width: 576px)">
+                <img loading="lazy" src="img/catalog/desktop/01.png" class="image catalog-item__img"
+                  alt="AOS Ср-во для мытья посуды Апельсин+мята">
+              </picture>
+            </a>
+            <p class="catalog-item__size item-size">450 мл</p>
+            <a href="product-card.html" class="item-link catalog-item__text-link">
+              <p class="item-link__text"><span class="item-link__word">AOS </span>Ср-во для мытья
+                посуды Апельсин+мята</p>
+            </a>
+            <ul class="catalog-item__descr-list item-descr list-reset">
+              <li class="item-descr__item">
+                <p class="item-descr__name">Штрихкод:</p>
+                <p class="item-descr__value">4604049097548</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Производитель:</p>
+                <p class="item-descr__value">Нэфис</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Бренд:</p>
+                <p class="item-descr__value">AOS</p>
+              </li>
+            </ul>
+            <div class="catalog-item__price-box">
+              <span class="catalog-item__price-value">48,76Р</span>
+              <button class="catalog-item__btn btn btn-reset">В корзину</button>
+            </div>
+          </article>
+          <article class="catalog-item" data-attr="Популярное">
+            <a href="product-card.html" class="catalog-item__link">
+              <picture>
+                <source srcset="img/catalog/desktop/02.webp" type="image/webp">
+                <source srcset="./img/catalog/mobile/02.png" media="(max-width: 576px)">
+                <img loading="lazy" src="img/catalog/desktop/02.png" class="image catalog-item__img"
+                  alt="Средство для мытья посуды Crystal">
+              </picture>
+            </a>
+            <p class="catalog-item__size item-size">450 мл</p>
+            <a href="product-card.html" class="item-link catalog-item__text-link">
+              <p class="item-link__text"><span class="item-link__word">AOS </span>Средство для мытья посуды Crystal</p>
+            </a>
+            <ul class="catalog-item__descr-list item-descr list-reset">
+              <li class="item-descr__item">
+                <p class="item-descr__name">Штрихкод:</p>
+                <p class="item-descr__value">4604049097548</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Производитель:</p>
+                <p class="item-descr__value">Нэфис</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Бренд:</p>
+                <p class="item-descr__value">AOS</p>
+              </li>
+            </ul>
+            <div class="catalog-item__price-box">
+              <span class="catalog-item__price-value">48,76Р</span>
+              <button class="catalog-item__btn btn btn-reset">В корзину</button>
+            </div>
+          </article>
+          <article class="catalog-item" data-attr="Популярное">
+            <a href="product-card.html" class="catalog-item__link">
+              <picture>
+                <source srcset="img/catalog/desktop/03.webp" type="image/webp">
+                <source srcset="./img/catalog/mobile/03.png" media="(max-width: 576px)">
+                <img loading="lazy" src="img/catalog/desktop/03.png" class="image catalog-item__img"
+                  alt="Автомат Гель СМС жидкое в растворимых капсулах Liquid Capsules Горный родник">
+              </picture>
+            </a>
+            <p class="catalog-item__size item-size">15X28.8 г</p>
+            <a href="product-card.html" class="item-link catalog-item__text-link">
+              <p class="item-link__text"><span class="item-link__word">ARIEL </span>Автомат Гель СМС жидкое в
+                растворимых капсулах Liquid Capsules Горный родник</p>
+            </a>
+            <ul class="catalog-item__descr-list item-descr list-reset">
+              <li class="item-descr__item">
+                <p class="item-descr__name">Штрихкод:</p>
+                <p class="item-descr__value">4604049097548</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Производитель:</p>
+                <p class="item-descr__value">Нэфис</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Бренд:</p>
+                <p class="item-descr__value">ARIEL</p>
+              </li>
+            </ul>
+            <div class="catalog-item__price-box">
+              <span class="catalog-item__price-value">48,76Р</span>
+              <button class="catalog-item__btn btn btn-reset">В корзину</button>
+            </div>
+          </article>
+          <article class="catalog-item" data-attr="Популярное">
+            <a href="product-card.html" class="catalog-item__link">
+              <picture>
+                <source srcset="img/catalog/desktop/04.webp" type="image/webp">
+                <source srcset="./img/catalog/mobile/04.png" media="(max-width: 576px)">
+                <img loading="lazy" src="img/catalog/desktop/04.png" class="image catalog-item__img"
+                  alt="Порошок стиральный Автомат 100 пятен COMPACT">
+              </picture>
+            </a>
+            <p class="catalog-item__size item-size">1500 г</p>
+            <a href="product-card.html" class="item-link catalog-item__text-link">
+              <p class="item-link__text"><span class="item-link__word">BIMAX </span>Порошок стиральный Автомат 100 пятен
+                COMPACT</p>
+            </a>
+            <ul class="catalog-item__descr-list item-descr list-reset">
+              <li class="item-descr__item">
+                <p class="item-descr__name">Штрихкод:</p>
+                <p class="item-descr__value">4604049097548</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Производитель:</p>
+                <p class="item-descr__value">Нэфис</p>
+              </li>
+              <li class="item-descr__item">
+                <p class="item-descr__name">Бренд:</p>
+                <p class="item-descr__value">BIMAX</p>
+              </li>
+            </ul>
+            <div class="catalog-item__price-box">
+              <span class="catalog-item__price-value">48,76Р</span>
+              <button class="catalog-item__btn btn btn-reset">В корзину</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
