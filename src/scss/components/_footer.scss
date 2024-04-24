@@ -20,10 +20,6 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-
-    @include mobile {
-      justify-content: flex-start;
-    }
   }
 
   &__title {
@@ -96,7 +92,6 @@
     flex-direction: column;
 
     @include mobile {
-      flex: 1;
       padding-top: 55px;
       order: 1;
     }

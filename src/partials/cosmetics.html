@@ -63,12 +63,12 @@
             <p class="catalog-content__price">Цена <span class="catalog-content__currency">₸</span></p>
             <div class="catalog-content__price-box">
               <label class="catalog-content__label">
-                <input class="catalog-content__input-range input-reset catalog-content__input" name="Сумма[]"
+                <input class="catalog-content__input-range input-reset catalog-content__input" name="Сумма[]" placeholder="0"
                   type="number">
               </label>
               <span class="catalog-content__input-digit">-</span>
               <label class="catalog-content__label">
-                <input class="catalog-content__input-range input-reset catalog-content__input" name="Сумма[]"
+                <input class="catalog-content__input-range input-reset catalog-content__input" name="Сумма[]" placeholder="10 000""
                   type="number">
               </label>
             </div>
@@ -300,36 +300,36 @@
         </div>
         <div class="catalog-content__categories-box">
           <h2 class="catalog-content__aside-title">Бренды</h2>
-          <ul class="catalog-content__list list-reset">
-            <li class="catalog-content__item">
+          <ul class="catalog-content__brands-list list-reset">
+            <li class="catalog-content__brands-item">
               <picture>
                 <source srcset="img/brands/air.webp" type="image/webp">
                 <img loading="lazy" src="img/brands/air.png" class="image catalog-content__brands-img" width="82"
                   height="88" alt="Логотип компании Air Wick">
               </picture>
             </li>
-            <li class="catalog-content__item">
+            <li class="catalog-content__brands-item">
               <picture>
                 <source srcset="img/brands/master.webp" type="image/webp">
                 <img loading="lazy" src="img/brands/master.png" class="image catalog-content__brands-img" width="82"
                   height="88" alt="Логотип компании Master Fresh">
               </picture>
             </li>
-            <li class="catalog-content__item">
+            <li class="catalog-content__brands-item">
               <picture>
-                <source srcset="img/brands/sibior.webp" type="image/webp">
-                <img loading="lazy" src="img/brands/sibior.png" class="image catalog-content__brands-img" width="82"
-                  height="88" alt="Логотип компании Сибиор">
+                <source srcset="img/brands/sibior-large.webp" type="image/webp">
+                <img loading="lazy" src="img/brands/sibior-large.png" class="image catalog-content__brands-img" width="238"
+                  height="77" alt="Логотип компании Сибиор">
               </picture>
             </li>
-            <li class="catalog-content__item">
+            <li class="catalog-content__brands-item">
               <picture>
                 <source srcset="img/brands/cotton.webp" type="image/webp">
                 <img loading="lazy" src="img/brands/cotton.png" class="image catalog-content__brands-img" width="82"
                   height="88" alt="Логотип компании Cotton Club">
               </picture>
             </li>
-            <li class="catalog-content__item">
+            <li class="catalog-content__brands-item">
               <picture>
                 <source srcset="img/brands/Camay.webp" type="image/webp">
                 <img loading="lazy" src="img/brands/Camay.png" class="image catalog-content__brands-img" width="82"
@@ -340,8 +340,8 @@
         </div>
       </aside>
       <div class="catalog-content__products">
-        <div class="catalog-content__products-items grid-catalog">
-          <article class="catalog-item" data-attr="Популярное">
+        <div class="catalog-content__products-items grid-catalog" data-catalog>
+          <!-- <article class="catalog-item" data-attr="Популярное">
             <a href="product-card.html" class="catalog-item__link">
               <picture>
                 <source srcset="img/catalog/desktop/01.webp" type="image/webp">
@@ -471,7 +471,7 @@
               <span class="catalog-item__price-value">48,76Р</span>
               <button class="catalog-item__btn btn btn-reset">В корзину</button>
             </div>
-          </article>
+          </article> -->
         </div>
       </div>
     </div>

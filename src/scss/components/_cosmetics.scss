@@ -1,6 +1,10 @@
 .cosmetics {
   &__breadcrumbs {
     margin-bottom: 50px;
+
+    @include mobile {
+      margin-bottom: 35px;
+    }
   }
 
   &__top {
@@ -16,6 +20,10 @@
     font-size: 40px;
     line-height: 120%;
     text-transform: uppercase;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__list {

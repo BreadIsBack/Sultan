@@ -1,7 +1,20 @@
+// Количество показываемых карточек при первом рендере
+const COUNT_SHOW_CARDS_CLICK = 8;
+
 const ERROR_SERVER = 'Ошибка сервера, попробуйте позже!';
 const NO_PRODUCTS_IN_THIS_CATEGORY = 'Товаров в этой категории нет!';
 const PRODUCT_INFORMATION_NOT_FOUND = 'Информация о товаре не найдена!';
 const NO_ITEMS_CART = 'В корзине нет товаров!';
+
+function showErrorMessage(message) {
+  const h1 = document.querySelector('.wrapper h1')
+  const msg =
+      `<div class="error">
+          <p>${message}</p>
+          <p><a href="/">Перейти к списку товаров!</a></p>
+      </div>`;
+  h1.insertAdjacentHTML('afterend', msg);
+}
 
 function getBasketLocalStorage() {
   const cartDataJSON = localStorage.getItem('basket');
@@ -35,6 +48,7 @@ const catalogPromo = document.querySelectorAll('[data-promo]');
 const catalogSimilar = document.querySelectorAll('[data-similar]');
 const catalogWatched = document.querySelectorAll('[data-watched]');
 
+let shownCards = COUNT_SHOW_CARDS_CLICK;
 let productsData = [];
 
 getProducts();
@@ -62,17 +76,19 @@ async function getProducts() {
     renderStartPage(productsData);
 
   } catch (err) {
+    // showErrorMessage(ERROR_SERVER);
     console.log(err);
   }
 }
 
 function renderStartPage(data) {
   if (!data || !data.length) {
+    // showErrorMessage(NO_PRODUCTS_IN_THIS_CATEGORY);
     console.log('Error')
     return
   };
 
-  const arrCards = data.slice(0, 8);
+  const arrCards = data.slice(0, COUNT_SHOW_CARDS_CLICK);
   createCards(arrCards);
 
   checkingRelevanceValueBasket(data);
@@ -81,9 +97,8 @@ function renderStartPage(data) {
   chekingActiveButtons(basket);
 }
 
-let cardsArray = []; //создаю общий массив карт
 function createCards(data) {
-
+  let cardsArray = []; //создаю общий массив карт
   data.forEach(card => {
     const {
       id,
@@ -144,17 +159,12 @@ function createCards(data) {
     cardsArray.push(cardItem)
 
   });
+
   let counter = 0;
-
-  let test = Object.entries(data);
-  console.log(test)
-
-  if (data[0]['dataAttr'] === 'Акция') {
-    catalogPromo.forEach(item => {
-      item.insertAdjacentHTML('beforeend', cardsArray[counter])
-      counter++;
-    })
-  }
+  catalogPromo.forEach(item => {
+    item.insertAdjacentHTML('beforeend', cardsArray[counter])
+    counter++;
+  })
 
   catalogSimilar.forEach(item => {
     item.insertAdjacentHTML('beforeend', cardsArray[counter])
@@ -165,8 +175,6 @@ function createCards(data) {
     item.insertAdjacentHTML('beforeend', cardsArray[counter])
     counter++;
   })
-
-  console.log(counter)
 }
 
 

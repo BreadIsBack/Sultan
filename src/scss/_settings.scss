@@ -210,6 +210,10 @@ input[type="number"]::-webkit-outer-spin-button {
     font-weight: 800;
     color: var(--yellow-color);
   }
+
+  @include mobile {
+    font-size: 20px;
+  }
 }
 
 .grid-catalog {
@@ -220,4 +224,20 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .section-header-offset {
   margin-top: var(--header-mobile-height);
+}
+
+[data-attr='Акция']::before {
+  background-color: #d81f1f;
+}
+
+[data-attr='Популярное']::before {
+  background-color: #1fd85d;
+}
+
+[data-attr='Новинка']::before {
+  background-color: #6daeea;
+}
+
+[data-attr='КЕШБЭК 10%']::before {
+  background-color: #d06efe;
 }
