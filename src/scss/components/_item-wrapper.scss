@@ -7,12 +7,19 @@
   }
 
   &__img-box {
+    display: block;
     margin-right: 40px;
 
     @include mobile {
       margin-right: 0;
       margin-bottom: 15px;
     }
+  }
+
+  &__img {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: contain;
   }
 
   &__content {

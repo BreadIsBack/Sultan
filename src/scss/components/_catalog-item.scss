@@ -67,5 +67,12 @@
       transform: translateY(-50%);
 
     }
+
+    &--delete {
+      padding: 10px;
+      &::before {
+        display: none;
+      }
+    }
   }
 }
