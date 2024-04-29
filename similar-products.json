@@ -1,0 +1,54 @@
+[
+  {
+    "img": "01",
+    "size": "450 мл",
+    "title": "AOS ",
+    "title-text": "Ср-во для мытья посуды Апельсин+мята",
+    "code": "Штрихкод:",
+    "code-number": "4604049097548",
+    "producer": "Производитель:",
+    "producer-name": "Нэфис",
+    "brand": "Бренд:",
+    "brand-name": "AOS",
+    "price": "48,76 ₸"
+  },
+  {
+    "img": "02",
+    "size": "450 мл",
+    "title": "AOS ",
+    "title-text": "Средство для мытья посуды Crystal",
+    "code": "Штрихкод:",
+    "code-number": "4604049097548",
+    "producer": "Производитель:",
+    "producer-name": "Нэфис",
+    "brand": "Бренд:",
+    "brand-name": "AOS",
+    "price": "48,76 ₸"
+  },
+  {
+    "img": "03",
+    "size": "15X28.8 г",
+    "title": "ARIEL ",
+    "title-text": "Автомат Гель СМС жидкое в растворимых капсулах Liquid Capsules Горный родник",
+    "code": "Штрихкод:",
+    "code-number": "4604049097548",
+    "producer": "Производитель:",
+    "producer-name": "Нэфис",
+    "brand": "Бренд:",
+    "brand-name": "ARIEL",
+    "price": "48,76 ₸"
+  },
+  {
+    "img": "04",
+    "size": "1500 г",
+    "title": "BIMAX ",
+    "title-text": "Порошок стиральный Автомат 100 пятен COMPACT",
+    "code": "Штрихкод:",
+    "code-number": "4604049097548",
+    "producer": "Производитель:",
+    "producer-name": "Нэфис",
+    "brand": "Бренд:",
+    "brand-name": "BIMAX",
+    "price": "48,76 ₸"
+  }
+]
