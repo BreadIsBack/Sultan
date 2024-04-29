@@ -2,4 +2,26 @@
   &__breadcrumbs {
     margin-bottom: 50px;
   }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 100px;
+    font-weight: 500;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 290px);
+    gap: 21px;
+
+    @include small-tablet {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    padding: 10px 20px;
+  }
 }

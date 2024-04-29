@@ -75,4 +75,15 @@
       }
     }
   }
+
+  &__basket-box {
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    margin: 0;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--grey-color);
+  }
 }

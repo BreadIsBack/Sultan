@@ -25,7 +25,7 @@ const swiperBrands = new Swiper('.swiper-brands', {
   slidesPerView: 1,
   loop: true,
   pagination: {
-    el: '.swiper-brands__pagination',
+    el: '.swiper-brands-box__pagination',
     clickable: true,
     dynamicBullets: true,
     dynamicMainBullets: 3,

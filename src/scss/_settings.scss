@@ -16,6 +16,7 @@ html {
 
 .page__body {
   margin: 0;
+  margin-top: var(--header-mobile-height);
   min-width: 320px;
   height: 100%;
   font-family: var(--font-family), sans-serif;
@@ -222,9 +223,9 @@ input[type="number"]::-webkit-outer-spin-button {
   gap: 21px;
 }
 
-.section-header-offset {
-  margin-top: var(--header-mobile-height);
-}
+// .section-header-offset {
+//   margin-top: var(--header-mobile-height);
+// }
 
 [data-attr='Акция']::before {
   background-color: #d81f1f;

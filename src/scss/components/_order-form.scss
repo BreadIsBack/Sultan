@@ -1,0 +1,254 @@
+.order-form {
+  width: 100%;
+  max-width: 680px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(290px, 1fr));
+  counter-reset: number 0;
+  gap: 100px;
+
+  @include tablet {
+    max-width: 100%;
+    gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include mobile {
+    gap: 0;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &--comment {
+      flex: 1 1 auto;
+    }
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__legend {
+    margin-bottom: 35px;
+    padding-left: 50px;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffefd2;
+    }
+
+    &::after {
+      position: absolute;
+      counter-increment: number;
+      content: counter(number);
+      width: 10px;
+      height: 10px;
+      left: 14px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      color: var(--grey-color);
+    }
+
+    @include small-tablet {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__label {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @include small-tablet {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__input {
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+  }
+
+  &__input,
+  &__textarea {
+    padding: 20px 30px;
+    border-radius: 36px;
+    background-color: #ededed;
+    cursor: text;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #e4e4e4;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: 1px solid var(--grey-color);
+    }
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: 150%;
+      color: #5c6370;
+      opacity: 0.6;
+
+      @include small-tablet {
+        font-size: 12px;
+      }
+    }
+
+    &:placeholder-shown {
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @include small-tablet {
+      order: 1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffefd2;
+    }
+
+    &::after {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--1 {
+      &::after {
+        left: 10px;
+        content: url('../img/order/1.svg');
+      }
+    }
+
+    &--2 {
+      &::after {
+        left: 9px;
+        content: url('../img/order/2.svg');
+      }
+    }
+
+    &--3 {
+      &::after {
+        left: 13px;
+        content: url('../img/order/3.svg');
+      }
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+    font-size: 12px;
+    color: var(--grey-color);
+  }
+
+  &__text-accent {
+    font-weight: 700;
+  }
+
+  &__textarea {
+    border: none;
+    resize: none;
+    height: 100%;
+
+    @include small-tablet {
+      min-height: 325px;
+
+    }
+  }
+
+  &__btn {
+    padding: 21px;
+    width: 100%;
+
+    &--mobile {
+      display: none;
+    }
+
+    @include small-tablet {
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+      }
+    }
+  }
+}

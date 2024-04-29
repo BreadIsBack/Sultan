@@ -37,6 +37,7 @@ const catalogSimilar = document.querySelectorAll('[data-similar]');
 const catalogWatched = document.querySelectorAll('[data-watched]');
 const basketList = document.querySelector('.basket__list');
 const aboutItem = document.querySelector('.item-wrapper');
+const orderList = document.querySelector('.order__cart-list');
 
 let productsData = [];
 
@@ -136,7 +137,7 @@ function createCards(data) {
     </ul>
     <div class="catalog-item__price-box">
       <span class="catalog-item__price-value">${price}</span>
-      <button class="catalog-item__btn btn btn-reset">В корзину</button>
+      <button class="catalog-item__btn btn btn-reset btn-to-cart">В корзину</button>
     </div>
   </article>
           `
@@ -160,7 +161,7 @@ function createCards(data) {
 }
 
 function handleCardClick(event) {
-  const targetButton = event.target.closest('.catalog-item__btn');
+  const targetButton = event.target.closest('.btn-to-cart');
 
   if (!targetButton) {
     return;
@@ -181,7 +182,7 @@ function handleCardClick(event) {
 }
 
 function chekingActiveButtons(basket) {
-  const buttons = document.querySelectorAll('.catalog-item__btn');
+  const buttons = document.querySelectorAll('.btn-to-cart');
 
   buttons.forEach(btn => {
     const card = btn.closest('.catalog-item');
@@ -271,24 +272,23 @@ function renderInfoProduct(product) {
     <div class="item-wrapper__img-box">
     <picture>
       <source srcset="img/catalog/desktop/${img}.webp" type="image/webp">
-      <img loading="lazy" src="img/catalog/desktop/${img}.png" class="image item-wrapper__img" width="664" height="300" alt="BioMio BIO-SOAP Экологичное туалетное мыло">
+      <img loading="lazy" src="img/catalog/desktop/${img}.png" class="image item-wrapper__img" width="664" height="300" alt="${title} ${titleText}">
     </picture>
   </div>
   <div class="item-wrapper__content">
     <span class="item-wrapper__stock">В наличии</span>
     <a class="item-link">
-      <p class="item-link__text item-wrapper__text"><span class="item-link__word item-wrapper__word">BioMio BIO-SOAP </span>Экологичное туалетное
-        мыло. Литсея и бергамот</p>
+      <p class="item-link__text item-wrapper__text"><span class="item-link__word item-wrapper__word">${title} </span>${titleText}</p>
     </a>
-    <p class="item-wrapper__size item-size item-size--stock">90 г</p>
+    <p class="item-wrapper__size item-size item-size--stock">${size}</p>
     <div class="item-wrapper__price-content">
-      <span class="item-wrapper__price">48,76Р</span>
+      <span class="item-wrapper__price">${price}</span>
       <div class="item-wrapper__price-btns">
         <button class="item-wrapper__btn btn-reset item-wrapper__btn--min">-</button>
         <span class="item-wrapper__counter">1</span>
         <button class="item-wrapper__btn btn-reset item-wrapper__btn--max">+</button>
       </div>
-      <button class="item-wrapper__btn-action btn btn-reset">В корзину</button>
+      <button class="item-wrapper__btn-action btn btn-reset btn-to-cart">В корзину</button>
     </div>
     <div class="item-wrapper__info">
       <a href="#" class="item-wrapper__info-link">
@@ -297,7 +297,7 @@ function renderInfoProduct(product) {
         </svg>
       </a>
       <p class="item-wrapper__info-text">
-        При покупке от <span class="item-wrapper__info-price">10 000 ₸ </span>бесплатная доставка по Кокчетаву и области
+        При покупке от <span class="item-wrapper__info-price">${price}</span>бесплатная доставка по Кокчетаву и области
       </p>
       <button class="item-wrapper__link-price btn-reset" data-graph-path="modal-price">Прайс-лист
         <svg class="item-wrapper__link-svg">
@@ -307,12 +307,12 @@ function renderInfoProduct(product) {
     </div>
     <ul class="item-wrapper__descr-list item-descr list-reset">
       <li class="item-descr__item">
-        <p class="item-descr__name">Производитель:</p>
-        <p class="item-descr__value">BioMio</p>
+        <p class="item-descr__name">${producer}</p>
+        <p class="item-descr__value">${producerName}</p>
       </li>
       <li class="item-descr__item">
-        <p class="item-descr__name">Бренд:</p>
-        <p class="item-descr__value">BioMio</p>
+        <p class="item-descr__name">${brand}</p>
+        <p class="item-descr__value">${brandName}</p>
       </li>
       <li class="item-descr__item">
         <p class="item-descr__name">Артикул:</p>
@@ -323,8 +323,8 @@ function renderInfoProduct(product) {
         <p class="item-descr__value">2</p>
       </li>
       <li class="item-descr__item">
-        <p class="item-descr__name">Штрихкод:</p>
-        <p class="item-descr__value">4604049097548</p>
+        <p class="item-descr__name">${code}</p>
+        <p class="item-descr__value">${codeNumber}</p>
       </li>
       <li class="item-descr__item">
         <p class="item-descr__name">Размеры коробки(Д*Ш*В):</p>
@@ -414,6 +414,10 @@ if (basketList) {
   basketList.addEventListener('click', delProductBasket);
 }
 
+if (orderList) {
+  orderList.addEventListener('click', delProductBasket);
+}
+
 function delProductBasket(event) {
   const targetButton = event.target.closest('.catalog-item__btn--delete');
 
@@ -445,6 +449,7 @@ async function getProductsCart() {
     }
 
     loadProductBasket(productsData);
+    loadProductBasketOrder(productsData); //
 
   } catch (err) {
     console.log(err);
@@ -453,7 +458,9 @@ async function getProductsCart() {
 
 function loadProductBasket(data) {
 
-  basketList.textContent = '';
+  if (basketList) {
+    basketList.textContent = '';
+  }
 
   if (!data || !data.length) {
     console.log('Error');
@@ -477,6 +484,77 @@ function loadProductBasket(data) {
   renderProductsBasket(findProducts);
 }
 
+function loadProductBasketOrder(data) { //
+
+  if (orderList) {
+    orderList.textContent = '';
+  }
+
+  if (!data || !data.length) {
+    console.log('Error');
+    return;
+  }
+
+  checkingRelevanceValueBasket(data);
+  const basket = getBasketLocalStorage();
+
+  if (!basket || !basket.length) {
+    console.log('Error');
+    return;
+  }
+
+  const findProducts = data.filter(item => basket.includes(String(item.id)));
+  if (!findProducts.length) {
+    console.log('Error');
+    return;
+  }
+
+  renderProductsBasketOrder(findProducts);
+}
+
+function renderProductsBasketOrder(arr) {
+  arr.forEach(card => {
+    const {
+      id,
+      img,
+      size,
+      title,
+      titleText,
+      price,
+      dataAttr,
+      description,
+    } = card;
+
+    const cardItem =
+      `
+    <article class="catalog-item" data-product-id="${id}">
+    <a href="/product-card.html?id=${id}" class="catalog-item__link">
+      <picture>
+        <source srcset="img/catalog/desktop/${img}.webp" type="image/webp">
+        <source srcset="./img/catalog/mobile/${img}.png" media="(max-width: 576px)">
+        <img loading="lazy" src="img/catalog/desktop/${img}.png" class="image catalog-item__img"
+          alt="${title} ${titleText}">
+      </picture>
+    </a>
+    <div class="catalog-item__basket-box">
+    <p class="catalog-item__size item-size">${size}</p>
+    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link">
+    <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
+    </a>
+    <div class="catalog-item__price-box">
+      <span class="catalog-item__price-value">${price}</span>
+      <button class="catalog-item__btn catalog-item__btn--delete btn btn-reset">Удалить</button>
+    </div>
+    </div>
+  </article>
+          `
+    if (orderList) {
+      orderList.insertAdjacentHTML('beforeend', cardItem);
+    }
+
+  });
+}
+
 
 function renderProductsBasket(arr) {
   arr.forEach(card => {
@@ -486,14 +564,9 @@ function renderProductsBasket(arr) {
       size,
       title,
       titleText,
-      code,
-      codeNumber,
-      producer,
-      producerName,
-      brand,
-      brandName,
       price,
       dataAttr,
+      description,
     } = card;
 
     const cardItem =
@@ -507,33 +580,23 @@ function renderProductsBasket(arr) {
           alt="${title} ${titleText}">
       </picture>
     </a>
+    <div class="catalog-item__basket-box">
     <p class="catalog-item__size item-size">${size}</p>
     <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link">
-      <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
+    <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
     </a>
-    <ul class="catalog-item__descr-list item-descr list-reset">
-      <li class="item-descr__item">
-        <p class="item-descr__name">${code}</p>
-        <p class="item-descr__value">${codeNumber}</p>
-      </li>
-      <li class="item-descr__item">
-        <p class="item-descr__name">${producer}</p>
-        <p class="item-descr__value">${producerName}</p>
-      </li>
-      <li class="item-descr__item">
-        <p class="item-descr__name">${brand}</p>
-        <p class="item-descr__value">${brandName}</p>
-      </li>
-    </ul>
+    <p class="catalog-item__description">${description}</p>
+    </div>
     <div class="catalog-item__price-box">
       <span class="catalog-item__price-value">${price}</span>
-      <button class="catalog-item__btn btn btn-reset">В корзину</button>
+      <button class="catalog-item__btn catalog-item__btn--delete btn btn-reset">Удалить</button>
     </div>
-    <button class="catalog-item__btn catalog-item__btn--delete btn btn-reset">Удалить</button>
   </article>
           `
 
-    basketList.insertAdjacentHTML('beforeend', cardItem);
+        if (basketList) {
+          basketList.insertAdjacentHTML('beforeend', cardItem);
+        }
 
   });
 }

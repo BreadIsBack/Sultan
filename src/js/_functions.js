@@ -42,7 +42,7 @@ import { getHeaderHeight } from './functions/header-height';
 getHeaderHeight();
 
 // Подключение плагина кастом-скролла
-// import 'simplebar';
+import 'simplebar';
 
 // Подключение плагина для позиционирования тултипов
 // import { createPopper, right} from '@popperjs/core';

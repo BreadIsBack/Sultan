@@ -1,0 +1,95 @@
+<section class="order section-margin">
+  <div class="container order__container">
+      <div class="container basket__container">
+        <nav class="nav breadcrumbs order__breadcrumbs" aria-label="Хлебные крошки">
+          <ul class="nav__list breadcrumbs__list list-reset">
+            <li class="nav__item breadcrumbs__item">
+              <a href="index.html" class="nav__link link">
+                  Главная
+              </a>
+            </li>
+            <li class="nav__item breadcrumbs__item">
+              <a href="cart.html" class="nav__link link">
+                Корзина
+              </a>
+            </li>
+            <li class="nav__item breadcrumbs__item" aria-current="page">
+              <a href="#" class="nav__link link">
+                Оформление заказа
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <h2 class="order__title">Оформление заказа</h2>
+        <div class="order__inner">
+          <form action="https://my-json-server.typicode.com/typicode/demo/posts" method="post" class="order__form order-form" method="post">
+            <div class="order-form__left">
+              <fieldset class="order-form__fieldset">
+                <legend class="order-form__legend">Контактные данные</legend>
+                <label class="order-form__label">Имя*
+                  <input type="text" class="order-form__input input-reset" name="Имя" placeholder="Введите ваше имя" required>
+                </label>
+                <label class="order-form__label">Телефон*
+                  <input type="tel" class="order-form__input input-reset" name="Телефон" placeholder="Введите ваш телефон" required>
+                </label>
+                <label class="order-form__label">E-mail*
+                  <input type="email" class="order-form__input input-reset" name="Email" placeholder="Введите ваш E-mail" required>
+                </label>
+                <label class="order-form__label">Название организации
+                  <input type="text" class="order-form__input input-reset" name="Организация" placeholder="Введите название организации"
+                    required>
+                </label>
+              </fieldset>
+              <fieldset class="order-form__fieldset">
+                <legend class="order-form__legend">Адрес доставки</legend>
+                  <label class="order-form__label">Адрес
+                    <input type="text" class="order-form__input input-reset" name="Адрес" placeholder="Введите адрес доставки"
+                      required>
+                  </label>
+              </fieldset>
+              <button class="order-form__btn order-form__btn--desktop btn btn-reset" type="submit">Подтвердить</button>
+            </div>
+            <div class="order-form__right">
+              <ul class="order-form__list list-reset">
+                <li class="order-form__item">
+                  <h2 class="order-form__item-title order-form__item-title--1">Оплата</h2>
+                  <p class="order-form__item-text">
+                    Принимаем оплату наличными, по карте и через расчетный счет.
+                  </p>
+                </li>
+                <li class="order-form__item">
+                  <h2 class="order-form__item-title order-form__item-title--2">Доставка</h2>
+                  <p class="order-form__item-text">
+                    Бесплатная доставка от <b class="order-forn__text-accent">10 000 ₸</b> по области. Наша доставка работает ежедневно.
+                  </p>
+                </li>
+                <li class="order-form__item">
+                  <h2 class="order-form__item-title order-form__item-title--3">возникли вопросы?</h2>
+                  <p class="order-form__item-text">
+                    Звоните: <b class="order-form__text-accent">+7 777 490 00 91</b> Менеджер Вам ответит на все вопросы.
+                  </p>
+                </li>
+              </ul>
+              <fieldset class="order-form__fieldset order-form__fieldset--comment">
+                <legend class="order-form__legend">Дополнительно</legend>
+                <label class="order-form__label">Комментарий
+                  <textarea class="order-form__textarea" name="Комментарий" placeholder="Введите ваш комментарий"></textarea>
+                </label>
+              </fieldset>
+            </div>
+            <button class="order-form__btn order-form__btn--mobile btn btn-reset" type="submit">Подтвердить</button>
+          </form>
+          <div class="order__cart-inner">
+            <h2 class="order__cart-title">Ваш заказ</h2>
+            <ul class="order__cart-list list-reset">
+
+            </ul>
+            <div class="order__total-price">
+              <p class="order__total-sum">Итого</p>
+              <span class="order__total-number"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
