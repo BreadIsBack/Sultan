@@ -56,7 +56,7 @@ async function getProducts() {
   try {
 
     if (!productsData.length) {
-      const res = await fetch('../card.json');
+      const res = await fetch('./card.json');
       if (!res.ok) {
         throw new Error(res.statusText);
       }
@@ -118,7 +118,7 @@ function createCards(data) {
       </picture>
     </a>
     <p class="catalog-item__size item-size">${size}</p>
-    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link">
+    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link link">
       <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
     </a>
     <ul class="catalog-item__descr-list item-descr list-reset">
@@ -204,7 +204,7 @@ async function getProductsInfo() {
   try {
 
     if (!productsData.length) {
-      const res = await fetch('../card.json');
+      const res = await fetch('./card.json');
       if (!res.ok) {
         throw new Error(res.statusText);
       }
@@ -441,7 +441,7 @@ async function getProductsCart() {
   try {
 
     if (!productsData.length) {
-      const res = await fetch('../card.json');
+      const res = await fetch('./card.json');
       if (!res.ok) {
         throw new Error(res.statusText);
       }
@@ -528,7 +528,7 @@ function renderProductsBasketOrder(arr) {
     const cardItem =
       `
     <article class="catalog-item" data-product-id="${id}">
-    <a href="/product-card.html?id=${id}" class="catalog-item__link">
+    <a href="/product-card.html?id=${id}" class="catalog-item__link link">
       <picture>
         <source srcset="img/catalog/desktop/${img}.webp" type="image/webp">
         <source srcset="./img/catalog/mobile/${img}.png" media="(max-width: 576px)">
@@ -582,7 +582,7 @@ function renderProductsBasket(arr) {
     </a>
     <div class="catalog-item__basket-box">
     <p class="catalog-item__size item-size">${size}</p>
-    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link">
+    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link link">
     <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
     </a>
     <p class="catalog-item__description">${description}</p>
