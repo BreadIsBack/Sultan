@@ -109,7 +109,7 @@ function createCards(data) {
     const cardItem =
       `
     <article class="catalog-item" data-attr="${dataAttr}" data-product-id="${id}">
-    <a href="/product-card.html?id=${id}" class="catalog-item__link">
+    <a href="product-card.html?id=${id}" class="catalog-item__link">
       <picture>
         <source srcset="img/catalog/desktop/${img}.webp" type="image/webp">
         <source srcset="./img/catalog/mobile/${img}.png" media="(max-width: 576px)">
@@ -118,7 +118,7 @@ function createCards(data) {
       </picture>
     </a>
     <p class="catalog-item__size item-size">${size}</p>
-    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link link">
+    <a href="product-card.html?id=${id}" class="item-link catalog-item__text-link link">
       <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
     </a>
     <ul class="catalog-item__descr-list item-descr list-reset">
@@ -178,7 +178,6 @@ function handleCardClick(event) {
   basket.push(id);
   setBasketLocalStorage(basket);
   chekingActiveButtons(basket);
-  console.log(getBasketLocalStorage());
 }
 
 function chekingActiveButtons(basket) {
@@ -528,7 +527,7 @@ function renderProductsBasketOrder(arr) {
     const cardItem =
       `
     <article class="catalog-item" data-product-id="${id}">
-    <a href="/product-card.html?id=${id}" class="catalog-item__link link">
+    <a href="product-card.html?id=${id}" class="catalog-item__link link">
       <picture>
         <source srcset="img/catalog/desktop/${img}.webp" type="image/webp">
         <source srcset="./img/catalog/mobile/${img}.png" media="(max-width: 576px)">
@@ -538,7 +537,7 @@ function renderProductsBasketOrder(arr) {
     </a>
     <div class="catalog-item__basket-box">
     <p class="catalog-item__size item-size">${size}</p>
-    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link">
+    <a href="product-card.html?id=${id}" class="item-link catalog-item__text-link">
     <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
     </a>
     <div class="catalog-item__price-box">
@@ -572,7 +571,7 @@ function renderProductsBasket(arr) {
     const cardItem =
       `
     <article class="catalog-item" data-attr="${dataAttr}" data-product-id="${id}">
-    <a href="/product-card.html?id=${id}" class="catalog-item__link">
+    <a href="product-card.html?id=${id}" class="catalog-item__link">
       <picture>
         <source srcset="img/catalog/desktop/${img}.webp" type="image/webp">
         <source srcset="./img/catalog/mobile/${img}.png" media="(max-width: 576px)">
@@ -582,7 +581,7 @@ function renderProductsBasket(arr) {
     </a>
     <div class="catalog-item__basket-box">
     <p class="catalog-item__size item-size">${size}</p>
-    <a href="/product-card.html?id=${id}" class="item-link catalog-item__text-link link">
+    <a href="product-card.html?id=${id}" class="item-link catalog-item__text-link link">
     <p class="item-link__text"><span class="item-link__word">${title} </span>${titleText}</p>
     </a>
     <p class="catalog-item__description">${description}</p>
