@@ -36,6 +36,7 @@
 
   &__cart-inner {
     max-width: 533px;
+    width: 100%;
     margin-top: 50px;
   }
 
@@ -47,9 +48,11 @@
     line-height: 120%;
   }
 
-  &__cart-list {
+  &__cart-simplebar {
     max-height: 620px;
-    overflow-x: auto;
+  }
+
+  &__cart-list {
     display: flex;
     flex-direction: column;
 

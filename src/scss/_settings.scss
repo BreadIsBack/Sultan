@@ -223,10 +223,6 @@ input[type="number"]::-webkit-outer-spin-button {
   gap: 21px;
 }
 
-// .section-header-offset {
-//   margin-top: var(--header-mobile-height);
-// }
-
 [data-attr='Акция']::before {
   background-color: #d81f1f;
 }
@@ -241,4 +237,21 @@ input[type="number"]::-webkit-outer-spin-button {
 
 [data-attr='КЕШБЭК 10%']::before {
   background-color: #d06efe;
+}
+
+.simplebar-track.simplebar-vertical {
+  background-color: #ffe9bf;
+  width: 4px;
+}
+
+.simplebar-scrollbar {
+  width: 6px;
+  background-color: #ffc85e;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #ffc85e;
+}
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
